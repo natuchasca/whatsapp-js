@@ -14,7 +14,6 @@ $(document).ready(function(){
 	$('.cuadro-contacto').on('click',function(){
 		var thisClone = $(this).clone();
 		$('.contacto-mensaje img').add('.contacto-mensaje p').add('.contacto-mensaje div').hide();
-		
 		$('.contacto-mensaje').html(thisClone);
 		$('.contacto-mensaje').find('.estado').remove();
 		$('.nombre-contacto').removeClass().addClass('nombre-contacto-mensaje');
