@@ -9,7 +9,20 @@
 
 
 //3Lista de Contactos
+$(document).ready(function(){
 
+	$('.cuadro-contacto').on('click',function(){
+		var thisClone = $(this).clone();
+		$('.contacto-mensaje img').add('.contacto-mensaje p').add('.contacto-mensaje div').hide();
+		
+		$('.contacto-mensaje').html(thisClone);
+		$('.contacto-mensaje').find('.estado').remove();
+		$('.nombre-contacto').removeClass().addClass('nombre-contacto-mensaje');
+		$('.hora-fecha').removeClass().addClass('contactos-hablando');
+		$('.contacto-mensaje .contactos-hablando').after('<div class="icons"><i class="icon-attachment icon-mensaje-up"></i><i class="icon-dots-three-vertical icon-mensaje-up"></i></div>');
+	})
+
+})
 
 
 
@@ -25,8 +38,6 @@
 
 //6 Sistema de busqueda para filar Contactos
 //Activo Categorias para seleccionar peliculas
-	$('.buscar-input').click(function() {
-
-	});
+	
 
 
