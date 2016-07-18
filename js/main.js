@@ -19,6 +19,7 @@ $(document).ready(function(){
 		$('.nombre-contacto').removeClass().addClass('nombre-contacto-mensaje');
 		$('.hora-fecha').removeClass().addClass('contactos-hablando');
 		$('.contacto-mensaje .contactos-hablando').after('<div class="icons"><i class="icon-attachment icon-mensaje-up"></i><i class="icon-dots-three-vertical icon-mensaje-up"></i></div>');
+		$('.mensajes').hide();
 	})
 
 })
