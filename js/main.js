@@ -24,6 +24,9 @@
 
 
 //6 Sistema de busqueda para filar Contactos
+//Activo Categorias para seleccionar peliculas
+	$('.buscar-input').click(function() {
 
+	});
 
 
