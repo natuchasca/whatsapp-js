@@ -10,6 +10,7 @@
 	  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CRoboto:300,400,500" media="all">
 	  	<link rel="stylesheet" href="css/icomoon.css">
 	  	<link rel="stylesheet" href="css/queries.css">
+	  	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.css" />
 	  <link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -137,7 +138,7 @@
 							</div>
 						</div>
 						<div class="escribir-mensaje">
-							<i class="icon-insert_emoticon icon-mensaje-down"></i>
+							<i class="icon-insert_emoticon icon-mensaje-down" onclick="emojify.run()"></i>
 							<input class="escribir" type="text" placeholder="Escribe tu mensaje aquí">
 							<i class="icon-mic icon-mensaje-down"></i>
 						</div>
@@ -149,6 +150,7 @@
 	    <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
 	    <!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="emojify.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
