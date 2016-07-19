@@ -1,8 +1,15 @@
+/* --- Variables --- */
+$verde: #dcf8c6;
+$gris: #eeeeee;
+$borde: #dbdbdb;
+$icons: #777777;
+
 /* --- FONDO --- */
 body {
 	background: -moz-linear-gradient(top, rgba(0,150,135,1) 0%, rgba(0,150,135,1) 12%, rgba(219,219,219,1) 12%, rgba(219,219,219,1) 100%);
 	background-repeat: no-repeat;
 	padding: 40px 0;
+	height: 631px;
 }
 
 img {
@@ -16,14 +23,15 @@ img {
 /* --- CUADRO CONTACTOS --- */
 .cuadro-contacto-contenedor {
 	height: auto;
-	width: 100%;
-	margin-right: 5px;
+	width: 338px;
+	z-index: 2;
+	position: relative;
 	.header-contacto {
-		background-color: #DCDCDC;
+		background-color: $gris;
 		height: 65px;
 		width: 338px;
 		padding: 10px;
-		border-bottom: 1px solid #B0B0B0;
+		border-bottom: 1px solid $borde;
 		.icons-contacto {
 			float: right;
 			margin-top: 10px;
@@ -33,7 +41,7 @@ img {
 		background-color: white;
 		height: 65px;
 		width: 320px;
-		border-bottom: 1px solid #B0B0B0;
+		border-bottom: 1px solid $borde;
 	}
 }
 
@@ -41,6 +49,8 @@ img {
 
 .icon-message {
 	margin-right: 10px;
+	font-size: 20px;
+	color: $icons;
 }
 
 .buscar {
@@ -49,18 +59,24 @@ img {
 	background-color: white;
 	text-align: center;
 	padding-top: 15px;
-	border-bottom: 1px solid #B0B0B0;
+	border-bottom: 1px solid $borde;
 	margin: 0 auto;
-	i.icon-search {
+	position: relative;
+	i.glyphicon-search {
 		font-size: 14px;
+		position: absolute;
+		padding: 22px 10px;
+		pointer-events: none;
+		color: $borde;
 	}
 
 	input.buscar-input {
 		width: 90%;
-		color: #B0B0B0;
+		color: $borde;
 		padding: 5px 5px;
+		padding-left: 30px;
 		border-radius: 5px;
-		border: 1px solid #B0B0B0;
+		border: 1px solid $borde;
 	}
 }
 
@@ -69,7 +85,7 @@ img {
 .contactos {
 	width: 337px;
 	height: 100%;
-	max-height: 400px;
+	max-height: 406px;
 	overflow: auto;
 	.cuadro-contacto {
 		padding: 7px;
@@ -79,7 +95,7 @@ img {
 			}
 			.nombre-contacto {
 			font-size: 14px;
-			color: grey;
+			color: #49484D;
 			padding-top: 5px;
 		}
 
@@ -106,12 +122,12 @@ img {
 /* --- CUADRO MENSAJE --- */
 
 .contacto-mensaje {
-	background-color: #DCDCDC;
+	background-color: $gris;
 	width: 100%;
 	height: 65px;
 	padding: 10px;
-	border-bottom: 1px solid #B0B0B0;
-	border-left: 1px solid #B0B0B0;
+	border-bottom: 1px solid $borde;
+	border-left: 1px solid $borde;
 	.foto-mensaje-perfil {
 		float: left;
 		margin-right: 10px;
@@ -127,26 +143,30 @@ img {
 	.icons {
 		float: right;
 		margin-top: -40px;
-		i {
-			font-size: 20px;
-			color: #49484D;
-			.icon-attachment {
-				margin-right: 10px;
-			}
-		}
+	}
+}
+
+
+
+i {
+	font-size: 20px;
+	color: $icons;
+	.icon-attachment {
+		margin-right: 10px;
 	}
 }
 
 
 .mensajes {
 	background-image: url(../image/chat-panel-bg.png);
-	background-color: #DCDCDC;
+	background-color: $gris;
 	background-repeat: repeat;
 	width: 100%;
 	height: 100%;
 	max-height: 400px;
 	padding: 20px 20px 0 20px;
 	overflow: auto;
+	z-index: 1;
 	.mensaje {
 		background-color: white;
 		height: 65px;
@@ -171,7 +191,7 @@ img {
 		}
 	}
 	.mensaje-respuesta1 {
-		background-color: #B0D87A;
+		background-color: $verde;
 		height: 50px;
 		width: 230px;
 		border-radius: 10px;
@@ -181,7 +201,7 @@ img {
 	}
 
 	.mensaje-respuesta2 {
-		background-color: #B0D87A;
+		background-color: $verde;
 		height: 50px;
 		width: 170px;
 		border-radius: 10px;
@@ -200,10 +220,10 @@ img {
 	
 
 .escribir-mensaje {
-	background-color: #DCDCDC;
+	background-color: $gris;
 	width: 100%;
 	height: 100%;
-	padding: 10px;
+	padding: 20px 10px;
 	.icon-insert_emoticon {
 		margin: 0 10px;
 	}
@@ -221,7 +241,8 @@ img {
 
 	.icon-mensaje-down {
 		font-size: 30px;
-		color: #49484D;
+		color: $icons;
+		vertical-align: middle;
 	}
 }
 

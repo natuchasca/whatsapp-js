@@ -1,8 +1,10 @@
+/* --- Variables --- */
 /* --- FONDO --- */
 body {
   background: -moz-linear-gradient(top, #009687 0%, #009687 12%, #dbdbdb 12%, #dbdbdb 100%);
   background-repeat: no-repeat;
-  padding: 40px 0; }
+  padding: 40px 0;
+  height: 631px; }
 
 img {
   width: 45px;
@@ -13,14 +15,15 @@ img {
 /* --- CUADRO CONTACTOS --- */
 .cuadro-contacto-contenedor {
   height: auto;
-  width: 100%;
-  margin-right: 5px; }
+  width: 338px;
+  z-index: 2;
+  position: relative; }
   .cuadro-contacto-contenedor .header-contacto {
-    background-color: #DCDCDC;
+    background-color: #eeeeee;
     height: 65px;
     width: 338px;
     padding: 10px;
-    border-bottom: 1px solid #B0B0B0; }
+    border-bottom: 1px solid #dbdbdb; }
     .cuadro-contacto-contenedor .header-contacto .icons-contacto {
       float: right;
       margin-top: 10px; }
@@ -28,10 +31,12 @@ img {
     background-color: white;
     height: 65px;
     width: 320px;
-    border-bottom: 1px solid #B0B0B0; }
+    border-bottom: 1px solid #dbdbdb; }
 
 .icon-message {
-  margin-right: 10px; }
+  margin-right: 10px;
+  font-size: 20px;
+  color: #777777; }
 
 .buscar {
   height: 65px;
@@ -39,21 +44,27 @@ img {
   background-color: white;
   text-align: center;
   padding-top: 15px;
-  border-bottom: 1px solid #B0B0B0;
-  margin: 0 auto; }
-  .buscar i.icon-search {
-    font-size: 14px; }
+  border-bottom: 1px solid #dbdbdb;
+  margin: 0 auto;
+  position: relative; }
+  .buscar i.glyphicon-search {
+    font-size: 14px;
+    position: absolute;
+    padding: 22px 10px;
+    pointer-events: none;
+    color: #dbdbdb; }
   .buscar input.buscar-input {
     width: 90%;
-    color: #B0B0B0;
+    color: #dbdbdb;
     padding: 5px 5px;
+    padding-left: 30px;
     border-radius: 5px;
-    border: 1px solid #B0B0B0; }
+    border: 1px solid #dbdbdb; }
 
 .contactos {
   width: 337px;
   height: 100%;
-  max-height: 400px;
+  max-height: 406px;
   overflow: auto; }
   .contactos .cuadro-contacto {
     padding: 7px; }
@@ -62,7 +73,7 @@ img {
       margin-right: 10px; }
     .contactos .cuadro-contacto .nombre-contacto {
       font-size: 14px;
-      color: grey;
+      color: #49484D;
       padding-top: 5px; }
     .contactos .cuadro-contacto .estado {
       line-height: 0px;
@@ -76,12 +87,12 @@ img {
 
 /* --- CUADRO MENSAJE --- */
 .contacto-mensaje {
-  background-color: #DCDCDC;
+  background-color: #eeeeee;
   width: 100%;
   height: 65px;
   padding: 10px;
-  border-bottom: 1px solid #B0B0B0;
-  border-left: 1px solid #B0B0B0; }
+  border-bottom: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb; }
   .contacto-mensaje .foto-mensaje-perfil {
     float: left;
     margin-right: 10px; }
@@ -94,21 +105,23 @@ img {
   .contacto-mensaje .icons {
     float: right;
     margin-top: -40px; }
-    .contacto-mensaje .icons i {
-      font-size: 20px;
-      color: #49484D; }
-      .contacto-mensaje .icons i .icon-attachment {
-        margin-right: 10px; }
+
+i {
+  font-size: 20px;
+  color: #777777; }
+  i .icon-attachment {
+    margin-right: 10px; }
 
 .mensajes {
   background-image: url(../image/chat-panel-bg.png);
-  background-color: #DCDCDC;
+  background-color: #eeeeee;
   background-repeat: repeat;
   width: 100%;
   height: 100%;
   max-height: 400px;
   padding: 20px 20px 0 20px;
-  overflow: auto; }
+  overflow: auto;
+  z-index: 1; }
   .mensajes .mensaje {
     background-color: white;
     height: 65px;
@@ -126,7 +139,7 @@ img {
     .mensajes .mensaje .cafe {
       color: #BC6C2C; }
   .mensajes .mensaje-respuesta1 {
-    background-color: #B0D87A;
+    background-color: #dcf8c6;
     height: 50px;
     width: 230px;
     border-radius: 10px;
@@ -134,7 +147,7 @@ img {
     padding: 10px;
     float: right; }
   .mensajes .mensaje-respuesta2 {
-    background-color: #B0D87A;
+    background-color: #dcf8c6;
     height: 50px;
     width: 170px;
     border-radius: 10px;
@@ -148,10 +161,10 @@ img {
     margin-top: -12px; }
 
 .escribir-mensaje {
-  background-color: #DCDCDC;
+  background-color: #eeeeee;
   width: 100%;
   height: 100%;
-  padding: 10px; }
+  padding: 20px 10px; }
   .escribir-mensaje .icon-insert_emoticon {
     margin: 0 10px; }
   .escribir-mensaje input.escribir {
@@ -163,6 +176,7 @@ img {
     margin: 0 10px; }
   .escribir-mensaje .icon-mensaje-down {
     font-size: 30px;
-    color: #49484D; }
+    color: #777777;
+    vertical-align: middle; }
 
 /*# sourceMappingURL=main.css.map */
