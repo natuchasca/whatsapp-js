@@ -1,18 +1,17 @@
 //NIVEL 0
 //1 Input de texto
 //variable para agregar texto en el input clase escribir-mensaje
-
+var txt= $('.escribir').val();
 $('.escribir').bind('keypress', function(e) {
 	if(e.keyCode==13){
 		var txt= $(this).val();
-		$(".mensaje-respuesta1").html(txt);
-		agregar();
+		var txt1 = $('<div class="mensaje"><span class="verde" class="fecha">Maria Paula Rivarola</span><p>' + txt + '</p></div>');
+		$(".mensaje1").html(txt1);
+		$(".mensaje1").css("background-color","#B0D87A")
+		//$(".mensaje1").empty();
 	}
 });
-function agregar(){
-	var txt1= document.createElement("p");
-	$(".mensaje-respuesta1").
-}
+
 
 //2 Burbujas
 
