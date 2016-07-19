@@ -10,7 +10,7 @@
 
 //3Lista de Contactos
 $(document).ready(function(){
-
+	$('.emojis').hide();
 	$('.cuadro-contacto').on('click',function(){
 		var thisClone = $(this).clone();
 		$('.contacto-mensaje img').add('.contacto-mensaje p').add('.contacto-mensaje div').hide();
@@ -49,6 +49,45 @@ $(document).ready(function(){
 			console.log("soy el noveno")
 		})
 	})
+	$('.icon-insert_emoticon').click(function(){
+		$('.emojis').css('position','absolute')
+		$('.emojis').toggle()
+	})
+	$('.emociones').on('click',function(){
+			console.log("clonar");
+		
+	})
+	/*$('.emoji').on('click',function(){
+			console.log("clonar");
+			var showClonar = $(this).clone()
+			$('.mensaje').html(showClonar)
+			$('.icon-insert_emoticon').toggle()
+		})*/
+	//$('#alternar-panel-oculto').toggle( 
+ 
+        /* 
+            Primer click.
+            Función que descubre un panel oculto
+            y cambia el texto del botón.
+        
+        function(e){ 
+            $('#panel-oculto').slideDown();
+            $(this).text('Cerrar el panel');
+            e.preventDefault();
+        }, // Separamos las dos funciones con una coma
+     
+        
+            Segundo click.
+            Función que oculta el panel
+            y vuelve a cambiar el texto del botón.
+        
+        function(e){ 
+            $('#panel-oculto').slideUp();
+            $(this).text('Mostrar el panel oculto');
+            e.preventDefault();
+        }
+ 
+    );*/
 
 })
 
