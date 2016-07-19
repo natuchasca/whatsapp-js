@@ -17,7 +17,7 @@
 		<div class="cuadro">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-3 col-xs-12">
+					<div class="col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-3 col-xs-12">
 						<!-- CUADRO CONTACTO -->
 						<div class="cuadro-contacto-contenedor">
 							<div class="header-contacto">
@@ -29,7 +29,7 @@
 							</div>
 							<div class="input-group buscar">
 								<i class="glyphicon glyphicon-search"></i>
-								<input type="text" class="buscar-input"   placeholder=" Buscar o empezar un chat nuevo">
+								<input type="text" class="buscar-input" id="buscar-input"   placeholder=" Buscar o empezar un chat nuevo" onkeyup="search()">
 							</div>
 							<div class="contactos">
 								<div class="cuadro-contacto">
@@ -90,13 +90,16 @@
 						</div>
 					</div>
 					<!-- CUADRO MENSAJE -->
-					<div class="col-md-7 col-xs-12">
+					<div class="col-md-7 col-sm-7 col-xs-12">
 						<div class="contacto-mensaje">
 							<img class="foto-mensaje-perfil" src="image/logocodeacademy.png">
 							<p class="nombre-contacto-mensaje">Laboratoria Perú</p>
 							<p class="contactos-hablando">Ana María, Aldo, Gian, Mariana, Papu, Tú</p>
 							<div class="icons">
-								<i class="icon-attachment icon-mensaje-up"></i>
+								<div class="element">
+								  <i class="icon-attachment"></i>
+								  <input type="file" name="" id="">
+								</div>
 								<i class="icon-dots-three-vertical icon-mensaje-up"></i>
 							</div>
 						</div>
@@ -138,7 +141,7 @@
 						</div>
 						<div class="escribir-mensaje">
 							<i class="icon-insert_emoticon icon-mensaje-down"></i>
-							<input class="escribir" type="text" placeholder="Escribe tu mensaje aquí">
+							<input id="input-mensaje" class="escribir" type="text" placeholder="Escribe tu mensaje aquí">
 							<i class="icon-mic icon-mensaje-down"></i>
 						</div>
 					</div>
