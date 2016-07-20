@@ -5,16 +5,26 @@ var txt= $('.escribir').val();
 $('.escribir').bind('keypress', function(e) {
 	if(e.keyCode==13){
 		var txt= $(this).val();
-		var txt1 = $('<div class="mensaje"><span class="verde" class="fecha">Maria Paula Rivarola</span><p>' + txt + '</p></div>');
+		var txt1 = $('<div class="mensaje"><span class="verde" class="fecha">Maria Paula Rivarola</span><p>' + txt + '<p></p>' + fecha + '</p></div>');
 		$(".mensaje1").html(txt1);
 		$(".mensaje1").css("background-color","#B0D87A")
-		//$(".mensaje1").empty();
+		$(".mensaje").appendTo(".mensaje-respuesta1");
+		$(".escribir-mensaje input").val('');
+		
 	}
 });
+var fecha = new Date();
 
+function horas(){
+	var minutos = new date().getMinutes();
+	var horas = new date().getHours();
+}
+
+$(document).ready(function(){
+	horas();
+});
 
 //2 Burbujas
-
 
 
 
