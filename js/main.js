@@ -8,21 +8,27 @@
 
 
 
-//3Lista de Contactos
 $(document).ready(function(){
 
+	//Scroll bar abajo
+	$( ".mensajes").scrollTop( 300 );
+
+	//3Lista de Contactos
 	$('.cuadro-contacto').on('click',function(){
 		var thisClone = $(this).clone();
-		$('.contacto-mensaje img').add('.contacto-mensaje').add('.contacto-mensaje div').hide();
-		$('.contacto-mensaje').html(thisClone);
-		$('.contacto-mensaje').find('.estado').remove();
-		//$('.nombre-contacto').removeClass().addClass('nombre-contacto-mensaje');
-		//$('.hora-fecha').removeClass().addClass('contactos-hablando');
-		$('.contacto-mensaje .contactos-hablando').after('<div class="icons"><i class="icon-attachment icon-mensaje-up"></i><i class="icon-dots-three-vertical icon-mensaje-up"></i></div>');
-		$('.mensajes').hide();
+		//$('.contacto-mensaje img').add('.contacto-mensaje').add('.contacto-mensaje div');
+		$('.contacto-mensaje').html(thisClone); // Clonar 
+		$('.contacto-mensaje').find('.estado').remove(); // Remover ultimo mensaje .estado
+		$('.nombre-contacto').addClass('nombre-contacto-mensaje'); // Agregar estilo
+		$('.hora-fecha').addClass('contactos-hablando'); // Agregar estilo
+		$('.contacto-mensaje .contactos-hablando').after('<div class="icons"><div class="element"><i class="icon-attachment"></i><input type="file" name="" id=""></div><i class="icon-dots-three-vertical icon-mensaje-up"></i></div>');
 
+		//$('.mensaje').remove(); $('.respuesta').remove();
+
+	
+/*
 		$('.primero').click(function(){
-			$('.mensajes').show()
+			$('.mensaje').show(); $('.respuesta').show();
 		})
 		$('.segundo').click(function(){
 			console.log("soy el segundo")
@@ -47,8 +53,28 @@ $(document).ready(function(){
 		})
 		$('.noveno').click(function(){
 			console.log("soy el noveno")
-		})
+		})*/
+	});
+	
+
+	
+	//Funcion para limpiar inputs
+    $("input").on("focus", function(){
+        $("input").val("");
+    });
+
+    //Adjuntar archivo al clickear icono
+  	$(".icon-attachment").click(function () {
+	  $("input[type='file']").trigger('click');
+	});
+
+  /*	$('input[type="file"]').on('change', function() {
+	  var val = $(this).val();
+	  $(this).siblings('span').text(val);
 	})
+*/
+
+
 
 })
 
@@ -99,25 +125,6 @@ function search(){
 }
 
 
-
-$(document).ready(function() {
-
-	//Funcion para limpiar inputs
-    $("input").on("focus", function(){
-        $("input").val("");
-    });
-
-    //Adjuntar archivo al clickear icono
-    $(".icon-attachment").click(function () {
-	  $("input[type='file']").trigger('click');
-	});
-
-	$('input[type="file"]').on('change', function() {
-	  var val = $(this).val();
-	  $(this).siblings('span').text(val);
-	})
-
-});
 
 
 
