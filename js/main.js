@@ -15,7 +15,7 @@ $('.escribir').bind('keypress', function(e) {
             "background-color": "#dcf8c6",
             "border-radius": "10px",
             "text-align": "left",
-            "padding": "10px",
+            "padding": "5px 15px 2px",
             "float": "right",
             "clear": "right",
             "margin": "5px",
@@ -34,6 +34,7 @@ $('.escribir').bind('keypress', function(e) {
             "text-align": "right",
             "font-size": "10px",
             "color": "grey",
+            "margin-left": "60px",
         });
 		div.append(enviado);
 
@@ -60,7 +61,11 @@ $(document).ready(function(){
 		$('.hora-fecha').addClass('contactos-hablando'); // Agregar estilo
 		$('.contacto-mensaje .contactos-hablando').after('<div class="icons"><div class="element"><i class="icon-attachment"></i><input type="file" name="" id=""></div><i class="icon-dots-three-vertical icon-mensaje-up"></i></div>');
 
-		//$('.mensaje').remove(); $('.respuesta').remove();
+
+		mensaje = $("<div></div>");
+		mensaje.addClass("mensajes");
+        $(".mensajes").add(mensaje);
+		$('.mensaje').remove(); $('.respuesta').remove();
 
 	
 /*
