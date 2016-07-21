@@ -65,14 +65,14 @@ $(document).ready(function(){
 		mensaje = $("<div></div>");
 		mensaje.addClass("mensajes");
         $(".mensajes").add(mensaje);
-		$('.mensaje').remove(); $('.respuesta').remove();
+		$('.mensaje').hide(); $('.respuesta').hide();
 
 	
-/*
+
 		$('.primero').click(function(){
 			$('.mensaje').show(); $('.respuesta').show();
 		})
-		$('.segundo').click(function(){
+	/*	$('.segundo').click(function(){
 			console.log("soy el segundo")
 		})
 		$('.tercero').click(function(){
