@@ -11,7 +11,7 @@ $('.escribir').bind('keypress', function(e) {
 		var txt= $(this).val();
 
 		//2 Burbujas
-		div = $("<div></div>").text(txt).css({
+		div = $("<div class='re'></div>").text(txt).css({
             "background-color": "#dcf8c6",
             "border-radius": "10px",
             "text-align": "left",
@@ -50,7 +50,7 @@ $('.escribir').bind('keypress', function(e) {
 
 
 $(document).ready(function(){
-
+	$('.emojis').hide()
 	//3Lista de Contactos
 	$('.cuadro-contacto').on('click',function(){
 		var thisClone = $(this).clone();
@@ -66,11 +66,13 @@ $(document).ready(function(){
 		mensaje.addClass("mensajes");
         $(".mensajes").add(mensaje);
 		$('.mensaje').hide(); $('.respuesta').hide();
+		$('.re').hide()//clase de mensaje
 
 	
 
 		$('.primero').click(function(){
 			$('.mensaje').show(); $('.respuesta').show();
+			$('.re').show()//mostrar mensajes ateriores
 		})
 	/*	$('.segundo').click(function(){
 			console.log("soy el segundo")
@@ -97,8 +99,46 @@ $(document).ready(function(){
 			console.log("soy el noveno")
 		})*/
 	});
+	//insertado de emojis pero faltan las posiciones absoluta a .emojis
+		$('.icon-insert_emoticon').click(function(){
+			$('.emojis').toggle()
+		})
 	
+		$('.emociones').on('click',function(){
+			console.log("hosoak")
+			var cloneEmo = $(this).clone();
+			div = $("<div></div>").html(cloneEmo).css({
+	            "background-color": "#dcf8c6",
+	            "border-radius": "10px",
+	            "text-align": "left",
+	            "padding": "5px 15px 2px",
+	            "float": "right",
+	            "clear": "right",
+	            "margin": "5px",
+	        });;
+			$(".mensajes").append(div);
 
+			// Fecha del mensaje enviado
+			var fecha = new Date();
+			var hora = fecha.getHours();
+			var minutos = fecha.getMinutes();
+			//Agregar cero delante a numeros con 1 solo digito
+			if (hora<10) hora = "0"+hora;
+			if (minutos<10) minutos = "0"+minutos;
+
+			var enviado = $("<p></p>").text(hora + ":" + minutos).css({
+	            "text-align": "right",
+	            "font-size": "10px",
+	            "color": "grey",
+	            "margin-left": "60px",
+	        });
+			div.append(enviado);
+		
+
+			
+		})
+
+//termino de insertado de emojis
 	
 	//Funcion para limpiar inputs
     $("input").on("focus", function(){

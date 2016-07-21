@@ -263,3 +263,14 @@ i {
 	}
 }
 	
+.element {
+  display: inline-flex;
+  align-items: center;
+}
+.element i:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.element input {
+  display: none;
+}
