@@ -10,7 +10,6 @@
 	  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CRoboto:300,400,500" media="all">
 	  	<link rel="stylesheet" href="css/icomoon.css">
 	  	<link rel="stylesheet" href="css/queries.css">
-	  	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.css" />
 	  <link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -18,7 +17,7 @@
 		<div class="cuadro">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-3 col-xs-12">
+					<div class="col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-3 col-xs-12">
 						<!-- CUADRO CONTACTO -->
 						<div class="cuadro-contacto-contenedor">
 							<div class="header-contacto">
@@ -30,58 +29,58 @@
 							</div>
 							<div class="input-group buscar">
 								<i class="glyphicon glyphicon-search"></i>
-								<input type="text" class="buscar-input"   placeholder=" Buscar o empezar un chat nuevo">
+								<input type="text" class="buscar-input" id="buscar-input"   placeholder=" Buscar o empezar un chat nuevo" onkeyup="search()">
 							</div>
 							<div class="contactos">
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto primero">
 									<img src="image/logocodeacademy.png" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Laboratoria Perú</p>
 									<p class="estado">Aldo: No se pique!</p>
 									<p class="hora-fecha">14:25</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto segundo">
 									<img src="image/raymi.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Raymi Saldomando</p>
 									<p class="estado">La clase va bien!</p>
 									<p class="hora-fecha">11:25</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto tercero">
 									<img src="image/mariana.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Mariana Costa</p>
 									<p class="estado">El panel de speakers esta buenazo</p>
 									<p class="hora-fecha">09:25</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto cuarto">
 									<img src="image/anamaria.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Ana María Martinez Franklin</p>
 									<p class="estado">Pues dale chamo!</p>
 									<p class="hora-fecha">Ayer</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto quinto">
 									<img src="image/rodulfo.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Rodulfo Prieto</p>
 									<p class="estado">¿Cómo van las chicas?</p>
 									<p class="hora-fecha">Martes</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto sexto">
 									<img src="image/andrea.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Andrea Lamas</p>
 									<p class="estado">Hoy me toca clases de canto, yee!</p>
 									<p class="hora-fecha">Lunes</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto septimo">
 									<img src="image/mariapaula.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">María Paula Rivarola</p>
 									<p class="estado">Wuju! esto me encanta!! en verdad!</p>
 									<p class="hora-fecha">13/01/2016</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto octavo">
 									<img src="image/katy.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Katy Sanchez</p>
 									<p class="estado">No te preocupes, tengo el salón bajo control</p>
 									<p class="hora-fecha">11/01/2016</p>
 								</div>
-								<div class="cuadro-contacto">
+								<div class="cuadro-contacto noveno">
 									<img src="image/aldo.jpg" class="foto-mensaje-perfil">
 									<p class="nombre-contacto">Aldo Alfaro</p>
 									<p class="estado">Vamo a comer?</p>
@@ -91,61 +90,68 @@
 						</div>
 					</div>
 					<!-- CUADRO MENSAJE -->
-					<div class="col-md-7 col-xs-12">
-						<div class="contacto-mensaje">
-							<img class="foto-mensaje-perfil" src="image/logocodeacademy.png">
-							<p class="nombre-contacto-mensaje">Laboratoria Perú</p>
-							<p class="contactos-hablando">Ana María, Aldo, Gian, Mariana, Papu, Tú</p>
-							<div class="icons">
-								<i class="icon-attachment icon-mensaje-up"></i>
-								<i class="icon-dots-three-vertical icon-mensaje-up"></i>
+					<div class="col-md-7 col-sm-7 col-xs-12">
+						<div class="cuadro-mensaje">
+							<div class="contacto-mensaje">
+								<img class="foto-mensaje-perfil" src="image/logocodeacademy.png">
+								<p class="nombre-contacto-mensaje">Laboratoria Perú</p>
+								<p class="contactos-hablando">Ana María, Aldo, Gian, Mariana, Papu, Tú</p>
+								<div class="icons">
+									<div class="element">
+									  <i class="icon-attachment"></i>
+									  <input type="file" name="" id="">
+									</div>
+									<i class="icon-dots-three-vertical icon-mensaje-up"></i>
+								</div>
 							</div>
-						</div>
-						<div class="mensajes">
-							<div class="mensaje">
-								<span class="azul">Andrea Lamas</span>
-								<p>Chicos han visto el nuevo corte de Aldo?</p><p class="fecha text-right">11:12</p>
-							</div>
-							<div class="mensaje">
-								<span class="rosa">Mariana Costa</span>
-								<p>Finalmente se corto?</p><p class="fecha text-right">11:13</p>
-							</div>
-							<div class="mensaje">
-								<span class="verde">Maria Paula Rivarola</span>
-								<p>Jajaja Sii finalmente se cortó!!</p><p class="fecha text-right">11:13</p>
-							</div>
-							<div class="mensaje-respuesta1 respuesta right">
-								<p>Antes parecia mufasa jajajaja</p><p class="fecha text-right">11:14</p>
-							</div>
-							<div class="mensaje-respuesta2 respuesta right">
-								<p>Ahora si esta decente</p><p class="fecha text-right">11:18</p>
-							</div>
-							<div class="mensaje">
-								<span class="azul">Andrea Lamas</span>
-								<p>Por que se lo habrá cortado?</p><p class="fecha text-right">11:20</p>
-							</div>
-							<div class="mensaje">
-								<span class="cafe">Aldo Alfaro</span>
-								<p>Ya ya ya, hacia mucho calor que más</p><p class="fecha text-right">11:25</p>
-							</div>
-							<div class="mensaje">
-								<span class="azul">Andrea Lamas</span>
-								<p>Está siguiendo los pasos de Juan Diego!</p><p class="fecha text-right">11:30</p>
-							</div>
-							<div class="mensaje">
-								<span class="verde">Maria Paula Rivarola</span>
-								<p>Nunca!! Juan Diego es único</p><p class="fecha text-right">11:31</p>
+							<div class="mensajes" id="mensajes">
+								<div class="mensaje">
+									<span class="azul">Andrea Lamas</span>
+									<p>Chicos han visto el nuevo corte de Aldo?</p><p class="fecha text-right">11:12</p>
+								</div>
+								<div class="mensaje">
+									<span class="rosa">Mariana Costa</span>
+									<p>Finalmente se corto?</p><p class="fecha text-right">11:13</p>
+								</div>
+								<div class="mensaje">
+									<span class="verde">Maria Paula Rivarola</span>
+									<p>Jajaja Sii finalmente se cortó!!</p><p class="fecha text-right">11:13</p>
+								</div>
+								<div class="mensaje-respuesta1 respuesta right">
+									<p>Antes parecia mufasa jajajaja</p><p class="fecha text-right">11:14</p>
+								</div>
+								<div class="mensaje-respuesta2 respuesta right">
+									<p>Ahora si esta decente</p><p class="fecha text-right">11:18</p>
+								</div>
+								<div class="mensaje">
+									<span class="azul">Andrea Lamas</span>
+									<p>Por que se lo habrá cortado?</p><p class="fecha text-right">11:20</p>
+								</div>
+								<div class="mensaje">
+									<span class="cafe">Aldo Alfaro</span>
+									<p>Ya ya ya, hacia mucho calor que más</p><p class="fecha text-right">11:25</p>
+								</div>
+								<div class="mensaje">
+									<span class="azul">Andrea Lamas</span>
+									<p>Está siguiendo los pasos de Juan Diego!</p><p class="fecha text-right">11:30</p>
+								</div>
+								<div class="mensaje">
+									<span class="verde">Maria Paula Rivarola</span>
+									<p>Nunca!! Juan Diego es único</p><p class="fecha text-right">11:31</p>
+								</div>
 							</div>
 						</div>
 						<div class="escribir-mensaje">
-							<i class="icon-insert_emoticon icon-mensaje-down" onclick="emojify.run()"></i>
-							<input class="escribir" type="text" placeholder="Escribe tu mensaje aquí">
+							<i class="icon-insert_emoticon icon-mensaje-down"></i>
+							<input id="input-mensaje" class="escribir" id="escribir" type="text" placeholder="Escribe tu mensaje aquí">
 							<i class="icon-mic icon-mensaje-down"></i>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- SCRIPTS  nuevo script-->
+		<script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
 		<!-- SCRIPTS -->
 	    <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
 	    <!-- Latest compiled and minified JavaScript -->

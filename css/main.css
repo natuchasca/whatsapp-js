@@ -14,10 +14,12 @@ img {
 /* --- CUADRO GRANDE --- */
 /* --- CUADRO CONTACTOS --- */
 .cuadro-contacto-contenedor {
-  height: auto;
+  max-height: 567px;
+  min-height: 537px;
   width: 338px;
   z-index: 2;
-  position: relative; }
+  position: relative;
+  background-color: white; }
   .cuadro-contacto-contenedor .header-contacto {
     background-color: #eeeeee;
     height: 65px;
@@ -85,6 +87,13 @@ img {
       color: #49484D;
       font-size: 12px; }
 
+
+.cuadro-mensaje {
+  max-height: 500px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
 /* --- CUADRO MENSAJE --- */
 .contacto-mensaje {
   background-color: #eeeeee;
@@ -117,11 +126,10 @@ i {
   background-color: #eeeeee;
   background-repeat: repeat;
   width: 100%;
-  height: 100%;
-  max-height: 400px;
+  height: 400px;
   padding: 20px 20px 0 20px;
   overflow: auto;
-  z-index: 1; }
+  z-index: 1;  }
   .mensajes .mensaje {
     background-color: white;
     height: 65px;
@@ -157,8 +165,9 @@ i {
     float: right; }
   .mensajes .fecha {
     text-align: right;
-    font-size: 12px;
-    margin-top: -12px; }
+    font-size: 10px;
+    margin-top: -12px;
+    color: grey; }
 
 .escribir-mensaje {
   background-color: #eeeeee;
@@ -179,12 +188,17 @@ i {
     color: #777777;
     vertical-align: middle; }
 
-/*# sourceMappingURL=main.css.map */
 
-
-.emoji {
-    width: 1.5em;
-    height: 1.5em;
-    display: inline-block;
-    margin-bottom: -0.25em;
+/* Icono adjuntar archivo */
+.element {
+  display: inline-flex;
+  align-items: center;
 }
+.element i:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.element input {
+  display: none;
+}
+
