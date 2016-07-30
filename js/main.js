@@ -103,6 +103,13 @@ $(document).ready(function(){
 		$('.icon-insert_emoticon').click(function(){
 			$('.emojis').toggle()
 		})
+		/*
+		$('.icon-insert_emoticon').click(function(){
+		    $('.emojis').slideToggle({
+		    direction: "up"
+		    }, 400);
+		});
+*/
 	
 		$('.emociones').on('click',function(){
 			console.log("hosoak")
